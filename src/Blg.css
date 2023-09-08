@@ -1,0 +1,222 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4D160;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Hero section styles */
+  .hero {
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color:chocolate;
+  }
+
+  .hero h1:hover{
+    font-size: 40px;
+    color:brown;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #777;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  #articlesTitle a{
+    text-align: center;
+    color:chocolate;
+    font-size: 2.5rem;
+  }
+  
+  /* About section styles */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .container p {
+    margin-bottom: 20px;
+  }
+  
+  /* Articles section styles */
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .article-card {
+    background-color: #FBEEAC;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 4;
+  }
+  
+  .article-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .article-card p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 20px;
+  }
+
+  #articleView p{
+    font-size: 1.5rem;
+    text-rendering: optimizeLegibility;
+    /* text-overflow: ellipsis; */
+    
+    color: #1D5D9B;
+    margin-bottom: 20px;
+  }
+  
+  .article-card img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .read-more {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  .read-more:hover{
+    transition: background-color 1.5s ease-in;
+    transition: color 1s ease-in-out;
+   background-color:#f4D160;
+   color:orangered;
+   font-weight: 800;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  button.read-more{
+    border: #999332;
+    padding: 0.5rem;
+  }
+  
+  /* Contact section styles */
+  form input,
+  form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color:#999332;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  .tag{
+    color: slateblue;
+  }
+#tags p{
+  font-size: 1.2rem;
+  font-weight: 450;
+  display: inline;
+}
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  
+    .hero {
+      padding: 50px 0;
+    }
+  
+    .hero h1 {
+      font-size: 30px;
+    }
+  
+    .hero p {
+      font-size: 16px;
+    }
+  
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  
