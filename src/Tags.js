@@ -25,7 +25,7 @@ export function Tags({ tag, myClick }) {
 
 export function TagCards({ title, image, tag, preview }) {
   return (
-    <div className="article-card">
+    <div className="article-card ">
      
         <Card maxHeight={"200px" } maxWidth={"550px"}>
           <CardHeader padding={"2px"}>
@@ -42,44 +42,3 @@ export function TagCards({ title, image, tag, preview }) {
   );
 }
 
-export function All({ title, tag, preview }) {
-  return { ...data.map((item, ind) => <TagCards key={ind} {...data} />) };
-}
-
-export default function Wellbeing({ title, tag, preview }) {
-  let wellbeingArticles = [...data].filter(
-    (item, ind) => item.tag === "finance"
-  );
-
-  return (
-    <>
-      {wellbeingArticles.map((itm, ind) => (
-        <TagCards key={ind} {...wellbeingArticles} />
-      ))}
-    </>
-  );
-}
-
-export function Food({ title, tag, preview }) {
-  let foodArticles = [...data].filter((item, ind) => item.tag === "food");
-
-  return (
-    <>
-      {foodArticles.map((itm, ind) => (
-        <TagCards key={ind} {...foodArticles} />
-      ))}
-    </>
-  );
-}
-
-export function Finance({ title, tag, preview }) {
-  let financeArticles = [...data].filter((item, ind) => item.tag === "finance");
-
-  return (
-    <>
-      {financeArticles.map((itm, ind) => (
-        <TagCards key={ind} {...financeArticles} />
-      ))}
-    </>
-  );
-}

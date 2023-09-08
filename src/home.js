@@ -150,7 +150,7 @@ export function Intro({ tag }) {
               ))}
             </p>
           </div>
-          <div>
+          <div className="mx-auto">
             {tags.map((item, index, arr) => {
               
               return (

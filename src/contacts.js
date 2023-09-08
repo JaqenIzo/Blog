@@ -14,22 +14,22 @@ export default function ContactUs() {
  
 
   return (
-    <form className="w-75 m-3 border-3 border-warning p-3 m-lg-auto mt-lg-5 mb-lg-5" id="contactForm">
+    <form className="w-75 m-3 border-3 border-warning p-3 m-lg-auto mt-lg-5 mb-lg-5" id="contactForm" action="contacts.php" method="post">
       <FormText><h3>Contact us</h3></FormText>
       <FloatingLabel
         controlId="floatingInput"
         label="Your Name"
         className="mb-3  "
       >
-        <Form.Control type="text" placeholder="Your Name" className="form-control form-control-md" required/>
+        <Form.Control type="text" placeholder="Your Name" className="form-control form-control-md" name="name" required/>
       </FloatingLabel>
 
       <FloatingLabel controlId="floatingPassword" label="Email">
-        <Form.Control type="email" placeholder="abc@xyz.com" required />
+        <Form.Control type="email" placeholder="abc@xyz.com" name="email" required />
       </FloatingLabel>
 
      
-      <Form.Control as="textarea" placeholder="Your message" rows={5} required/>
+      <Form.Control as="textarea" placeholder="Your message" name="message" rows={5} required/>
 
       <Button type="submit"  className="btn btn-warning btn-sm btn-md" onClick={()=>{ setTimeout(function myValidation(){
    let nameInput = document.querySelector("input[type=text]");
