@@ -2,10 +2,11 @@
 import './App.css';
 import './Blg.css'
 import ContactUs from './contacts';
-import Home,{ArticleGrid,Intro} from './home';
-import { Ratemovie } from './home';
+import Home,{ArticleGrid} from './home';
+import { Ratemovie,FullArticles } from './home';
 import { linksList,data } from './objects';
 import { ChakraProvider } from '@chakra-ui/react';
+import { Intro } from './Tags';
 
 
 
@@ -21,7 +22,8 @@ function App() {
         <Ratemovie />
         <Intro {...data} />
         <ArticleGrid obj={[...data]} />
-        <ContactUs/>
+        <FullArticles/>
+       
       </div>
     </ChakraProvider>
   );

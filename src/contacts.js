@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button, FloatingLabel, Form, FormControl, FormText } from "react-bootstrap";
+import { Button, FloatingLabel, Form, FormText } from "react-bootstrap";
 
 export default function ContactUs() {
 
