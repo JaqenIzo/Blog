@@ -1,0 +1,31 @@
+export function ArticleGrid({ obj }) {
+
+  const [selectedArticle, setSelectedArticle] = useState(null);
+
+  const showArticle = (article) => {
+    setSelectedArticle(article);
+  };
+
+  console.log(obj)
+
+
+  
+  return (
+    <>
+      <h1 id="articlesTitle">
+        {" "}
+        <a name="articles" href="#articles"> Articles</a>
+      </h1>
+      
+      <div className="articles-grid">
+        {obj.map((item, ind) => {
+          return <Article {...item} key={ind} />;
+        })}
+      
+      </div> 
+
+
+      
+    </>
+  );
+}

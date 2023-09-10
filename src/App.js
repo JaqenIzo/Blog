@@ -21,8 +21,8 @@ function App() {
         <Home links={[...linksList]} />
         <Ratemovie />
         <Intro {...data} />
-        <ArticleGrid obj={[...data]} />
-        <FullArticles/>
+        {/* <ArticleGrid obj = {[...data]} /> */}
+        <FullArticles obj={[...data]}/>
        
       </div>
     </ChakraProvider>

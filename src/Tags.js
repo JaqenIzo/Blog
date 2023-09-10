@@ -34,9 +34,10 @@ export function Tags({ tag, myClick }) {
   );
 }
 
-export function TagCards({ title, image, tag, preview }) {
+export function TagCards({ title, image, tag, preview,myClick }) {
+  
   return (
-    <div className="tagCards" style={{margin:"0px 10px"}}>
+    <div className="tagCards" style={{margin:"0px 10px"}} onClick={myClick}>
      
         <Card maxHeight={"200px" } maxWidth={"550px"}>
           <CardHeader padding={"2px"}>
@@ -46,7 +47,7 @@ export function TagCards({ title, image, tag, preview }) {
             <Text>Tag:{tag}</Text>
             <Text>{preview}</Text>
           </CardBody>
-          <Button>Read More</Button>
+          <Button >Read More</Button>
         </Card>
       
     </div>

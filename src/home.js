@@ -1,7 +1,7 @@
 import React, {  useState } from "react";
 import { FaStar } from "react-icons/fa";
 import "./Blg.css";
-import Article from "./articles";
+import Article, { MainPost } from "./articles";
 import { TagCards } from "./Tags";
 import { data } from "./objects";
 
@@ -80,13 +80,16 @@ console.log(data.sort(mySorting("title")));
 
 export function ArticleGrid({ obj }) {
 
-  const[initial,setInitial] = useState([...data])
+  const [selectedArticle, setSelectedArticle] = useState(null);
 
-  function x(ind){
-   
-    setInitial()
+  const showArticle = (article) => {
+    setSelectedArticle(article);
+  };
 
-  }
+  console.log(obj)
+
+
+  
   return (
     <>
       <h1 id="articlesTitle">
@@ -94,42 +97,54 @@ export function ArticleGrid({ obj }) {
         <a name="articles" href="#articles"> Articles</a>
       </h1>
       
-     {initial? <div className="articles-grid">
-        {initial.map((item, ind) => {
-          return <Article {...item} key={ind} />;
+      <div className="articles-grid">
+        {obj.map((item, ind) => {
+          return <Article {...item} key={ind} myClick={()=>{showArticle(item)}} />;
         })}
       
-      </div>:  <FullArticles obj={[...data]} />}
+      </div> 
+
+
+      
     </>
   );
 }
 
-export function FullArticles(obj){
 
-  
 
-  return(
+export function FullArticles({ obj }) {
+
+  let randomPost = obj[Math.floor(Math.random() * obj.length)];
+  console.log(randomPost)
+
+  const [selectedArticle, setSelectedArticle] = useState(randomPost);
+
+  const showArticle = (article) => {
+    let mainArticle = document.querySelector(".mainArticle");
+    mainArticle.classList.remove("d-none");
+    setSelectedArticle(article);
+  };
+
+  console.log(obj);
+
+  return (
     <>
-    <div className="container">
-      <div className="articles-grid col-12 col-md-7">
-        <Article {...obj[0]}/>
-      </div>
-
-      {/* <div className="articles-grid col-">
-        {myObj.map(
-          (item,index)=>{
-            return <TagCards {...item} key={index}/>
+      <div className="d-lg-flex flex-row" id="articleParent">
+      <div className="articles-grid col-4" id="articleViewGrid">
+          {obj.map((item, index) => (
+            <Article {...item} key={index} myClick={() => showArticle(item)} />
+          ))
           }
-        )}
+        </div>
 
-      </div> */}
+        <div className="mainArticle">
+          { <MainPost {...selectedArticle} /> }
+        </div>
 
-
-
-
-    </div>
+        
+      </div>
     </>
-  )
+  );
 }
 
 

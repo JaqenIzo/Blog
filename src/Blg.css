@@ -98,7 +98,7 @@
     background-color: #FBEEAC;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 4;
+    max-width: 250px;
   }
   
   .article-card h3 {
@@ -193,6 +193,26 @@
   font-size: 1.2rem;
   font-weight: 450;
   display: inline;
+}
+
+#articleParent{
+  margin:0.5rem;
+}
+  
+
+#articleView{
+  margin-right: 0.25rem;
+}
+
+#articleViewGrid{
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top:100px;
+}
+
+#articleParent #articleViewGrid .article-card{
+  max-height: 250vh;
 }
   
   /* Media queries */
