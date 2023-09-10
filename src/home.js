@@ -126,7 +126,7 @@ export function FullArticles(obj){
 
 
 
-
+         
     </div>
     </>
   )
