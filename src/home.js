@@ -141,8 +141,8 @@ export function FullArticles({ obj }) {
           { <MainPost {...selectedArticle} /> }
         </div>
 
-        
-      </div>
+         
+    </div>
     </>
   );
 }
